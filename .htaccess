@@ -1,0 +1,7 @@
+# Original:  http://example.com/image.php?size=250x850&type=jpg&bg=ff8800&color=000000
+# Rewritten: http://example.com/250x850/jpg/ff8800/000000
+RewriteEngine On
+RewriteRule ^([A-Za-z0-9-]+)/?$ image.php?size=$1 [L]
+RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ image.php?size=$1&type=$2 [L]
+RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ image.php?size=$1&type=$2&bg=$3 [L]
+RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ image.php?size=$1&type=$2&bg=$3&color=$4 [L]
