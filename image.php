@@ -52,7 +52,7 @@ if (ctype_digit($strWidth) and ctype_digit($strHeight)) {
 	// Let's define the font (size. And NEVER go above 9).
 	$intFontSize = $strWidth / 16;
 	if ($intFontSize < 9) $intFontSize = 9;
-	$strFont = "ProFontWindows.ttf";
+	$strFont = "DroidSansMono.ttf";
 	$strText = $strWidth . 'x' . $strHeight;
 
 	// Create the picture.
