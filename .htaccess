@@ -1,7 +1,6 @@
-# Original:  http://example.com/image.php?size=250x850&type=jpg&bg=ff8800&color=000000
-# Rewritten: http://example.com/250x850/jpg/ff8800/000000
 RewriteEngine On
-RewriteRule ^([A-Za-z0-9-]+)/?$ image.php?size=$1 [L]
-RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ image.php?size=$1&type=$2 [L]
-RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ image.php?size=$1&type=$2&bg=$3 [L]
-RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ image.php?size=$1&type=$2&bg=$3&color=$4 [L]
+RewriteRule ^([0-9x]+)/?$ image.php?size=$1 [L,NC]
+RewriteRule ^([0-9x]+)/(png|gif|jpg|jpeg)/?$ image.php?size=$1&type=$2 [L,NC]
+RewriteRule ^([0-9x]+)/(png|gif|jpg|jpeg)/([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})/?$ image.php?size=$1&type=$2&bg=$3 [L,NC]
+RewriteRule ^([0-9x]+)/(png|gif|jpg|jpeg)/([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})/([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})/?$ image.php?size=$1&type=$2&bg=$3&color=$4 [L,NC]
+RewriteRule ^([0-9x]+)/(png|gif|jpg|jpeg)/([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})/([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})/(.*)?$ image.php?size=$1&type=$2&bg=$3&color=$4&text=$5 [L,NC]
