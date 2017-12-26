@@ -4,7 +4,7 @@
 
 ## Usage
 
-Just link to the `image.php` file via the HTML `<img>` element. For example, `<img src ="image.php?size=500x250&type=png&bg=f00&color=ffffff&text=Dummy`" alt="Dummy Image">` would create a PNG image with red (#f00) background, white (#ffffff) text, the word “Dummy” written on it and a size of 500px width, 250px height.
+Just link to the `image.php` file via the HTML `<img>` element. For example, `<img src ="image.php?size=500x250&type=png&bg=f00&color=ffffff&text=Dummy" alt="Dummy Image">` would create a PNG image with red (#f00) background, white (#ffffff) text, the word “Dummy” written on it and a size of 500px width, 250px height.
 
 This script handles the following parameters, where basically all of them are optional.
 
